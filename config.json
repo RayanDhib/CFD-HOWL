@@ -1,0 +1,5 @@
+{
+    "filename": "./examples/example1.CFmesh",
+    "output_filename": "./examples/output1.cgns",
+    "var_names": ["rho", "rhoU", "rhoV", "rhoE"]
+}

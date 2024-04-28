@@ -2,7 +2,16 @@ import numpy as np
 
 def read_input_data(filename):
     """
-    General function to read input data, delegating to specific reader based on file extension.
+    Read input data from a file, choosing the appropriate reader based on file extension.
+
+    Parameters:
+        filename (str): Path to the input file.
+
+    Returns:
+        tuple: Nodes, connectivity, solution data, and metadata extracted from the file.
+        
+    Raises:
+        ValueError: If the file format is not supported.
     """
     extension = filename.split('.')[-1].lower()
     if extension == "cfmesh":
@@ -12,7 +21,17 @@ def read_input_data(filename):
 
 def get_data_info(metadata, filename):
     """
-    Extracts general mesh and solution parameters from metadata.
+    Extract mesh and solution parameters from metadata based on file extension.
+
+    Parameters:
+        metadata (dict): Metadata dictionary containing the data details.
+        filename (str): Path to the file, used to determine handling based on extension.
+
+    Returns:
+        tuple: Dimension, number of equations, geometric order, solution order, number of elements, and element type.
+        
+    Raises:
+        ValueError: If the file format is not supported.
     """
     extension = filename.split('.')[-1].lower()
     if extension == "cfmesh":
@@ -22,7 +41,13 @@ def get_data_info(metadata, filename):
         
 def get_info_cfmesh(metadata):
     """
-    Extracts from CFmesh general mesh and solution parameters from metadata.
+    Extract parameters from CFmesh metadata.
+
+    Parameters:
+        metadata (dict): Metadata dictionary specific to CFmesh.
+
+    Returns:
+        tuple: Dimension, number of equations, geometric order, solution order, number of elements, and element type.
     """
     dim = int(metadata.get('!NB_DIM', [0])[0])
     nbEqs = int(metadata.get('!NB_EQ', [0])[0])
@@ -33,13 +58,22 @@ def get_info_cfmesh(metadata):
     return dim, nbEqs, geoOrder, solOrder, nbElem, ElemType
 
 def read_cfmesh(in_fname):
+    """
+    Read mesh data from a CFmesh file including nodes, element connectivity, and states.
+
+    Parameters:
+        in_fname (str): Path to the CFmesh file.
+
+    Returns:
+        tuple: Nodes, connectivity, solution data, and metadata from the CFmesh file.
+    """    
     metadata = {}
     connectivity = []
     element_states = []  # Store state indices for each element
     nodes = []
-    geom_ents = []
+    #geom_ents = []
     states = []  # This will store all state data temporarily
-    var_data = []
+    #var_data = []
 
     with open(in_fname, 'r') as in_file:
         line = 1
@@ -60,10 +94,9 @@ def read_cfmesh(in_fname):
                     n_line = in_file.tell()
                     line = in_file.readline().strip()
                     if not line:
-                        break  # end of section or file
+                        break
                     elements = line.split(' ')
                     try:
-                        # Slicing the line based on the number of nodes specified
                         elem_connectivity = np.array(elements[:nb_nodes_per_type]).astype(int)
                         state_indices = np.array(elements[nb_nodes_per_type:]).astype(int)
                         connectivity.append(elem_connectivity)
@@ -98,21 +131,12 @@ def read_cfmesh(in_fname):
                         in_file.seek(n_line)
                         break
 
-    # Link state data to elements using indices stored in element_states
-    # Initialize an empty list to store the linked state data for each element
     solution_data = []
-
-    # Loop through each set of indices stored in element_states
     for elem_indices in element_states:
-        # Initialize a temporary list to hold the states for the current element
         element_state_data = []
-    
-        # Loop through each index in the current set of elem_indices
         for idx in elem_indices:
-            # Append the state data corresponding to the current index to the temporary list
             element_state_data.append(states[idx])
     
-        # Append the list of state data for the current element to the solution_data list
         solution_data.append(element_state_data)
 
     return nodes, connectivity, solution_data, metadata

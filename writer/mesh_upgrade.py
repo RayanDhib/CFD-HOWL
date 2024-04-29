@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.spatial import cKDTree
-from utils import compute_geoShape_function
-from cgns_utils import get_cgns_cell_node_conn, get_CG_elemtype, get_outputPnts_mapped_coords
+from .utils import compute_geoShape_function
+from .cgns_utils import get_cgns_cell_node_conn, get_CG_elemtype, get_outputPnts_mapped_coords
 
 def upgrade_geoOrder(nodes, connectivity, old_geoOrder, new_geoOrder, ElemType):
     """

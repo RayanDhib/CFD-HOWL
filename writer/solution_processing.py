@@ -1,6 +1,6 @@
 import numpy as np
-from utils import compute_solShape_function
-from cgns_utils import get_outputPnts_mapped_coords, get_CG_elemtype
+from .utils import compute_solShape_function
+from .cgns_utils import get_outputPnts_mapped_coords, get_CG_elemtype
 
 def interpolate_to_nodes(mesh, solution_data, var_names, nbEqs):
     """

@@ -1,5 +1,4 @@
 # tests/test_cgns_utils.py
-
 import unittest
 import numpy as np
 from writer.cgns_utils import preprocess_coordinates, get_CG_elemtype, get_outputPnts_mapped_coords, get_cgns_cell_node_conn, CK

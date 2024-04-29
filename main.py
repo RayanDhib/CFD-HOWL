@@ -1,10 +1,10 @@
 import json
 import numpy as np
-from MeshData import MeshData
-from input_data import read_input_data, get_data_info
-from cgns_operations import create_new_cgns_tree, save_cgns_file, create_base, create_zone, write_coordinates, write_connectivity, write_solution
-from cgns_utils import preprocess_coordinates, get_CG_elemtype
-from solution_processing import interpolate_to_nodes
+from writer.MeshData import MeshData
+from writer.input_data import read_input_data, get_data_info
+from writer.cgns_operations import create_new_cgns_tree, save_cgns_file, create_base, create_zone, write_coordinates, write_connectivity, write_solution
+from writer.cgns_utils import preprocess_coordinates, get_CG_elemtype
+from writer.solution_processing import interpolate_to_nodes
 
 def load_config(config_file):
     with open(config_file, 'r') as file:

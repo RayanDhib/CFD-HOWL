@@ -12,6 +12,8 @@ The library addresses the limitations of traditional data storage techniques, wh
 
 ## Dependencies
 - **[pyCGNS](https://github.com/pyCGNS/pyCGNS)**: Utilized for handling CGNS file operations within Python.
+- **[NumPy](https://numpy.org/)**: Fundamental package for scientific computing with Python.
+- **[SciPy](https://scipy.org/)**: Utilized for handling CGNS file operations within Python.
 
 ## Getting Started
 1. **Install pyCGNS**:
@@ -22,16 +24,16 @@ The library addresses the limitations of traditional data storage techniques, wh
    - Clone this repository or download the source code.
 
 3. **Example Usage**:
-   - The `/examples` directory contains sample input data generated from high-order CFD solvers, including outputs from COOLFluiD simulations. These examples are designed to demonstrate how to use CFD-HOWL for writing high-order data into the CGNS format.
+   - The `/examples` directory contains sample input data generated from high-order CFD solvers, including outputs from [COOLFluiD](https://github.com/andrealani/COOLFluiD) simulations. These examples are designed to demonstrate how to use CFD-HOWL for writing high-order data into the CGNS format.
 
 ### Running the Example:
 1. **Configuration**:
-   - The `config.json` file specifies the input and output file directories. It is pre-configured to point to an example dataset, allowing for immediate use.
+   - The `config.json` file in the root directory specifies the input and output file directories. It is pre-configured to point to an example dataset, allowing for immediate use.
 
 2. **Execute the Script**:
-   - Navigate to the `/writer` directory and run the `main.py` script:
+   - Navigate to the root directory and run the `main.py` script:
      ```bash
-     cd writer
+     cd CFD-HOWL
      python main.py
      ```
    This script reads the configuration from `config.json` and processes the specified example data, writing the results to a .cgns file in the output directory defined in the configuration file.
@@ -46,6 +48,6 @@ We welcome contributions to CFD-HOWL. Please feel free to fork the repository, m
 CFD-HOWL is open-source under the GNU General Public License v3.0 (GNU-3). This license allows you to modify and redistribute the software under certain conditions. For more details, see the LICENSE file.
 
 ## Acknowledgments
-- This project was initially developed as part of enhancements to the COOLFluiD platform.(https://github.com/andrealani/COOLFluiD)
+- This project was initially developed as part of enhancements to the **COOLFluiD** platform, a world-class object-oriented HPC platform for CFD. COOLFluiD provides a comprehensive environment for implementing and running numerical simulations, with a focus on scalability, performance, and usability. For more information, visit [COOLFluiD on GitHub](https://github.com/andrealani/COOLFluiD).
 
 For more detailed information or support, please open an issue in this repository.

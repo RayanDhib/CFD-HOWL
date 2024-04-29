@@ -1,6 +1,6 @@
 import numpy as np
-from cgns_utils import get_CG_elemtype
-from mesh_upgrade import preprocess_connectivity, upgrade_geoOrder, clean_data
+from .cgns_utils import get_CG_elemtype
+from .mesh_upgrade import preprocess_connectivity, upgrade_geoOrder, clean_data
 
 class MeshData:
     def __init__(self, nodes, connectivity, elem_type, geo_order, sol_order):

@@ -45,7 +45,7 @@ The library addresses the limitations of traditional data storage techniques, wh
 We welcome contributions to CFD-HOWL. Please feel free to fork the repository, make improvements, and submit pull requests. For significant changes, please first open an issue to discuss what you would like to change.
 
 ## License
-CFD-HOWL is open-source under the GNU General Public License v3.0 (GNU-3). This license allows you to modify and redistribute the software under certain conditions. For more details, see the LICENSE file.
+CFD-HOWL is open-source under the GNU Lesser General Public License v3.0 (LGPL-3.0). This license allows you to modify and redistribute the software under certain conditions. For more details, see the LICENSE file.
 
 ## Acknowledgments
 - This project was initially developed as part of enhancements to the **COOLFluiD** platform, a world-class object-oriented HPC platform for CFD. COOLFluiD provides a comprehensive environment for implementing and running numerical simulations, with a focus on scalability, performance, and usability. For more information, visit [COOLFluiD on GitHub](https://github.com/andrealani/COOLFluiD).

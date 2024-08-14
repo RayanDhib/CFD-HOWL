@@ -15,31 +15,17 @@ The library addresses the limitations of traditional data storage techniques, wh
 - **[NumPy](https://numpy.org/)**: Fundamental package for scientific computing with Python.
 - **[SciPy](https://scipy.org/)**: Utilized for handling CGNS file operations within Python.
 
-## Getting Started
-1. **Install pyCGNS**:
-   - Ensure Python is installed on your system.
-   - Follow the [installation guide for pyCGNS](https://pycgns.github.io/install.html).
+## Installation and Usage
 
-2. **Download CFD-HOWL**:
-   - Clone this repository or download the source code.
+CFD-HOWL can be installed and used in two ways:
 
-3. **Example Usage**:
-   - The `/examples` directory contains sample input data generated from high-order CFD solvers, including outputs from [COOLFluiD](https://github.com/andrealani/COOLFluiD) simulations. These examples are designed to demonstrate how to use CFD-HOWL for writing high-order data into the CGNS format.
+### 1. [Using Docker](https://github.com/RayanDhib/CFD-HOWL/wiki/Docker-Installation-Guide)
+Docker provides an isolated environment to run CFD-HOWL without worrying about dependencies or system configuration.
 
-### Running the Example:
-1. **Configuration**:
-   - The `config.json` file in the root directory specifies the input and output file directories. It is pre-configured to point to an example dataset, allowing for immediate use.
+### 2. [Manual Installation](https://github.com/RayanDhib/CFD-HOWL/wiki/Manual-Installation-Guide)
+For users who prefer not to use Docker, manual installation instructions are also available.
 
-2. **Execute the Script**:
-   - Navigate to the root directory and run the `main.py` script:
-     ```bash
-     cd CFD-HOWL
-     python main.py
-     ```
-   This script reads the configuration from `config.json` and processes the specified example data, writing the results to a .cgns file in the output directory defined in the configuration file.
-
-3. **Review the Output**:
-   - Check the output directory specified in `config.json` to see the .cgns file. This file can be opened with visualization tools such as ParaView or Tecplot that support high-order elements, allowing you to inspect the high-order data integrity and visualization capabilities.
+For detailed installation instructions, usage examples, and troubleshooting tips, please refer to our [Wiki](https://github.com/RayanDhib/CFD-HOWL/wiki).
 
 ## Contributing
 We welcome contributions to CFD-HOWL. Please feel free to fork the repository, make improvements, and submit pull requests. For significant changes, please first open an issue to discuss what you would like to change.

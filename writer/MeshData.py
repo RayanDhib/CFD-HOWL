@@ -70,7 +70,8 @@ class MeshData:
 
             if upgraded_geo_order == 3 and old_geo_order == 2:
                 self._nodes, self._connectivity = clean_data(self._nodes, self._connectivity)
-
+        print("Mesh upgrade done.")
+        
     def __str__(self):
         """
         String representation of the MeshData object.

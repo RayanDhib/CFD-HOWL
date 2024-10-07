@@ -5,7 +5,7 @@ from .cgns_utils import get_cgns_cell_node_conn, get_CG_elemtype, get_outputPnts
 
 def upgrade_geoOrder(nodes, connectivity, old_geoOrder, new_geoOrder, ElemType):
     """
-    Upgrade the geometric order of the mesh nodes and connectivity.
+    Upgrade the geometric order of the mesh and connectivity.
 
     Parameters:
         nodes (np.array): The original node positions.

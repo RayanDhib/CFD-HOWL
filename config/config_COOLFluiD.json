@@ -1,0 +1,5 @@
+{
+    "filename": "./examples/COOLFluiD/example1.CFmesh",
+    "output_filename": "./examples/COOLFluiD/output1.cgns",
+    "var_names": ["rho", "rhoU", "rhoV", "rhoE"]
+}

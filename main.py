@@ -11,15 +11,18 @@ def load_config(config_file):
         return json.load(file)
 
 def main(config_file='config.json'):
-    # Load configuration
+    # Load the top-level configuration
     config = load_config(config_file)
 
+    # Load the active configuration specified in the top-level config
+    active_config = load_config(config['active_config'])
+
     # Load input data
-    nodes, connectivity, solution_data, metadata = read_input_data(config['filename'])
+    nodes, connectivity, solution_data, metadata = read_input_data(active_config['filename'])
     
     # Get general mesh and solution parameters 
-    dim, nbEqs, geoOrder, solOrder, nbElem, elem_type = get_data_info(metadata, config['filename'])
-    var_names = config['var_names']
+    dim, nbEqs, geoOrder, solOrder, nbElem, elem_type = get_data_info(metadata, active_config['filename'])
+    var_names = active_config['var_names']
     cell_dim = phys_dim = dim
 
     # Initialize MeshData
@@ -64,7 +67,7 @@ def main(config_file='config.json'):
     write_solution(zone_node, solution_name, output_solution_data)
 
     # Save the CGNS tree to a file
-    save_cgns_file(tree, config['output_filename'])
+    save_cgns_file(tree, active_config['output_filename'])
 
 if __name__ == "__main__":
     main()

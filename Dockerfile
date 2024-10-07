@@ -37,7 +37,7 @@ RUN arch=$(uname -m) && \
     fi && \
     bash miniforge.sh -b -p /opt/conda && \
     rm miniforge.sh && \
-    /opt/conda/bin/conda install -y python=3.8 numpy scipy vtk && \
+    /opt/conda/bin/conda install -y python=3.9 numpy scipy vtk && \
     /opt/conda/bin/conda clean -afy
 
 # Set path to conda

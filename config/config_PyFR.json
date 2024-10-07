@@ -1,0 +1,5 @@
+{
+    "filename": "./examples/PyFR/euler-vortex-6.4k.pyfrs",
+    "output_filename": "./examples/PyFR/output1.cgns",
+    "var_names": ["rho", "rhoU", "rhoV", "rhoE"]
+}

@@ -44,7 +44,7 @@ def compute_geoShape_function(mapped_coord, element_type, geo_order):
     else:
         raise ValueError(f"Unsupported element type {element_type}")
 
-# ----------------------------------------------------- Shape function should normally be retrieved from solver/ these definitions are taken from COOLFluiD
+# ----------------------------------------------------- Shape functions 
 def compute_geoShape_function_tri(mapped_coord, geo_order):
     """
     Calculate triangular element geometric shape functions.
@@ -187,6 +187,7 @@ def compute_solShape_function_quad(mapped_coord, sol_order):
     return shape_func
 # Add more functions for other element types like Tetra, Hexa, etc.
 
+# ----------------------------------------------------- Helper functions 
 def get_solPolyCoefs(sol_pnts_local_coords, sol_poly_exponents):
     """
     Compute the coefficients for the solution polynomials based on the solution points' local coordinates and polynomial exponents.

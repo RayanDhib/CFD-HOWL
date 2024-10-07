@@ -23,17 +23,17 @@ CFD-HOWL can be installed and used in two ways:
 Docker provides an isolated environment to run CFD-HOWL without worrying about dependencies or system configuration.
 
 ### 2. [Manual Installation](https://github.com/RayanDhib/CFD-HOWL/wiki/Manual-Installation-Guide)
-For users who prefer not to use Docker, manual installation instructions are also available.
+Manual installation instructions are also available for users who prefer not to use Docker.
 
-For detailed installation instructions, usage examples, and troubleshooting tips, please refer to our [Wiki](https://github.com/RayanDhib/CFD-HOWL/wiki).
+Please refer to our [Wiki] (https://github.com/RayanDhib/CFD-HOWL/wiki) for detailed installation instructions, usage examples, and troubleshooting tips.
 
 ## Contributing
-We welcome contributions to CFD-HOWL. Please feel free to fork the repository, make improvements, and submit pull requests. For significant changes, please first open an issue to discuss what you would like to change.
+We welcome contributions to CFD-HOWL. Please feel free to fork the repository, make improvements, and submit pull requests. For significant changes, please open an issue to discuss what you want to change.
 
 ## License
-CFD-HOWL is open-source under the GNU Lesser General Public License v3.0 (LGPL-3.0). This license allows you to modify and redistribute the software under certain conditions. For more details, see the LICENSE file.
+CFD-HOWL is open-source under the GNU Lesser General Public License v3.0 (LGPL-3.0). This license allows you to modify and redistribute the software under certain conditions. For more details, please take a look at the LICENSE file.
 
 ## Acknowledgments
-- This project was initially developed as part of enhancements to the **COOLFluiD** platform, a world-class object-oriented HPC platform for CFD. COOLFluiD provides a comprehensive environment for implementing and running numerical simulations, with a focus on scalability, performance, and usability. For more information, visit [COOLFluiD on GitHub](https://github.com/andrealani/COOLFluiD).
+- This project was initially developed as part of enhancements to the **COOLFluiD** platform, a world-class object-oriented HPC platform for CFD. COOLFluiD provides a comprehensive environment for implementing and running numerical simulations, focusing on scalability, performance, and usability. For more information, visit [COOLFluiD on GitHub](https://github.com/andrealani/COOLFluiD).
 
-For more detailed information or support, please open an issue in this repository.
+Please open an issue in this repository for more detailed information or support.

@@ -30,6 +30,10 @@ Please refer to our [Wiki] (https://github.com/RayanDhib/CFD-HOWL/wiki) for deta
 ## Contributing
 We welcome contributions to CFD-HOWL. Please feel free to fork the repository, make improvements, and submit pull requests. For significant changes, please open an issue to discuss what you want to change.
 
+## Further Information and Citation
+For more details about CFD-HOWL's implementation, functionality, and performance, as well as citation information, please refer to our paper published in SoftwareX:
+[Input/Output Library for Higher-Order Computational Fluid Dynamics Data](https://www.sciencedirect.com/science/article/pii/S2352711024003133).
+
 ## License
 CFD-HOWL is open-source under the GNU Lesser General Public License v3.0 (LGPL-3.0). This license allows you to modify and redistribute the software under certain conditions. For more details, please take a look at the LICENSE file.
 
